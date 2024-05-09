@@ -1,0 +1,87 @@
+<h1>prgm1</h1>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copy Text Box</title>
+</head>
+<body>
+
+<textarea id="text-to-copy" rows="4" cols="50"> PG 03 Nmap
+
+  ipconfig
+  
+  1.To scan singe target
+  
+  nmap ip
+  
+  2.Range of Host
+  
+  nmap ip -50
+  
+  3.Specific Port
+  
+  nmap -p 912 ip
+  
+  4. Ping Scan
+  
+  nmap -sP ip
+  
+  5. Top Ports
+  
+  nmap -top-ports 10 ip
+  
+  6. Open Ports 
+  
+  nmap -open ip
+  
+  7.Version
+  
+  nmap -sV ip
+  
+  8.common Port
+  
+  nmap -F ip
+  
+  9. Service Version Detection 
+  
+  nmap -sV ip
+  
+  10. Syn scan
+  
+  nmap -sS 192.168.133.1
+  
+  11.Service version detection range
+  
+  nmap -sC -sV ip
+  
+   
+  
+   
+
+</textarea><br>
+
+<button onclick="copyText()">Copy Text</button>
+
+<script>
+function copyText() {
+  /* Get the text field */
+  var copyText = document.getElementById("text-to-copy");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+</script>
+
+</body>
+</html>
